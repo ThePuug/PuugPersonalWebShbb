@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Southhill Bread Box",
+    siteUrl: "https://ashy-stone-03dbf680f.azurestaticapps.net"
   },
   plugins: [
     "gatsby-plugin-sass",
