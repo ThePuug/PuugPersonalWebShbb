@@ -1,0 +1,92 @@
+carousel:
+  slides:
+    - link: services
+      title: SOUTHHILL BREAD BOX
+      text: HELPING TO SUPPLEMENT THE FOOD NEEDS OF THOSE IN THE SOUTH HILL AREA
+      image: carouselServices
+      button: INTERESTED IN WHAT WE DO? - CLICK HERE
+    - link: requirements
+      title: KNOW WHAT YOU NEED
+      text: BEFORE YOU COME. THERE ARE A FEW THINGS YOU NEED TO KNOW AND A FEW THINGS YOU NEED TO BRING!
+      image: carouselRequirements
+      button: LEARN ABOUT BREAD BOX REQUIREMENTS - CLICK HERE
+    - link: support
+      title: WANT TO GET INVOLVED?
+      text: CONTACT US AND BECOME A PART OF OUR TEAM
+      image: carouselSupport
+      button: LEARN HOW YOU CAN HELP - CLICK HERE
+services:
+  heading: OUR SERVICES
+  items:
+    - title: CARE
+      image: icoCare
+      text: > 
+        Provide non-perishable food supplies to qualified clients on a quarterly basis.
+    - title: ENCOURAGE
+      image: icoEncourage
+      text: >
+        Provide more than just food but offer holistic help through connecting clients to other 
+        potential resources.
+    - title: SUPPORT
+      image: icoSupport
+      text: >
+        Provide emergency non-perishable food supplies when alerted of a need by one of our care 
+        partners around the South Hill area.
+requirements:
+  heading: REQUIREMENTS FOR PATRONS
+  items:
+    - text: >
+        LIMIT OF ONE FOOD ALLOTMENT PER HOUSEHOLD PER QUARTER REGARDLESS OF THE NUMBER OF FAMILIES 
+        LIVING THERE
+    - text: > 
+        CLIENT MAY ESTABLISH A PROXY AGENT TO PICK UP THEIR FOOD FOR THEM.
+    - text: >
+        MUST MEET AND BE ABLE TO VALIDATE THE FINANCIAL QUALIFICATION TO ESTABLISH ELIGIBILITY FOR 
+        OUR PROGRAM. 
+    - text: >
+        MUST HAVE A CURRENT BILL WITH YOUR CURRENT HOME ADDRESS ON IT FOR EVERY PICK UP
+    - text: >
+        MUST PROVIDE A PHOTO ID FOR EVERY PICK UP
+    - text: >
+        RESIDENT OF MECKLENBURG COUNTY
+support:
+  heading: HOW CAN YOU SUPPORT US
+  items:
+    - title: DONATE
+      image: supportDonate
+      text: >
+        Tax deductible and can be made to Bread Box, PO Box 213, South Hill, VA 23970 or dropped 
+        off at the South Hill Chamber of Commerce. These dollars are used to purchase needed food 
+        when donations run low or when certain staples run out. None of our personnel are paid.
+    - title: LOCAL FOOD DRIVES
+      image: supportFooddrive
+      text: >
+        Big or small, they all help in a great way! We are open to speak to your church, 
+        business, or organization. We can also offer suggestions for formulating a drive, be it a 
+        one time event or an on-going year long collection drive. For large donations, we can 
+        arrange a pick up if necessary.
+    - title: VOLUNTEER
+      image: supportVolunteer
+      text: >
+        We are always looking for volunteers to help. There are lots of various duties and 
+        training is provided if required.
+team:
+  heading: MEET OUR TEAM
+  items:
+    - title: PRESIDENT
+      image: profileDana
+      subtitle: Dana Debaets
+      text: >
+        Our goal is to build awareness and through increased awareness, we can increase our ability 
+        to serve the needs of those in this county.
+    - title: SECRETARY
+      image: profileTom
+      subtitle: Tom McGrath
+      text: >
+        Being able to connect the dots between our business and the community served is important 
+        for a smooth and consistent operation.
+    - title: TREASURER
+      image: profileRick
+      subtitle: Rick Carroll
+      text: >
+        Managing the financial resources is key to being efficient in what we do.
