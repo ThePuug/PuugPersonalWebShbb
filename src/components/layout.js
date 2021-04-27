@@ -2,8 +2,9 @@ import React from "react"
 import { navigate } from "gatsby"
 import { Col, Layout, Menu, Row } from "antd"
 import footer from "../data/footer.yaml"
+import "../global.css"
 
-const { Footer, Header } = Layout
+const { Content, Footer, Header } = Layout
 
 if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]')
@@ -18,8 +19,8 @@ const CustomLayout = ({children}) => (
         <Menu.Item key="/contact">Contact</Menu.Item>
       </Menu>
     </Header>
-    <Layout>{children}</Layout>
-    <Footer style={{paddingLeft:"0", paddingRight:"0"}}>
+    <Content>{children}</Content>
+    <Footer>
       <Row align="top" gutter={16}>
         <Col sm={24} md={8}>
           <h2>{footer.about.heading}</h2>

@@ -1,11 +1,10 @@
 import * as React from "react"
 import data from "../data/index.yaml"
 import images from "../images/index"
-import { Button, Carousel, Card, Col, Divider, Image, Layout, Row } from "antd"
-const { Content } = Layout
+import { Button, Carousel, Card, Col, Divider, Image, Row } from "antd"
 
 const page = () => (
-  <Content className="content">
+  <>
     <Carousel autoplay>
       {data.carousel.slides.map((e,i) => (
         <Card key={"carousel-"+i}>
@@ -51,7 +50,7 @@ const page = () => (
         <Col sm={24} md={8} key={"support-"+i}>
           <Card key={"support-"+i}>
             <center>
-              <Image style={{height:"200px", width:"auto", borderRadius:"50%"}} src={images[e.image]} />
+              <Image style={{height:"162px", width:"auto", borderRadius:"50%"}} src={images[e.image]} />
               <h3>{e.title}</h3>
             </center>
             <p>{e.text}</p>
@@ -67,7 +66,7 @@ const page = () => (
           <Card key={"team"+i}>
             <center>
               <h3>{e.title}</h3>
-              <Image style={{height:"200px", width:"auto"}} src={images[e.image]} />
+              <Image style={{height:"162px", width:"auto"}} src={images[e.image]} />
               <h3>{e.subtitle}</h3>
             </center>
             <p>{e.text}</p>
@@ -75,6 +74,6 @@ const page = () => (
         </Col>
       ))}
     </Row>
-  </Content>
+  </>
 );
 export default page
