@@ -4,7 +4,6 @@ module.exports = {
     siteUrl: "https://ashy-stone-03dbf680f.azurestaticapps.net"
   },
   plugins: [
-    "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -41,5 +40,6 @@ module.exports = {
       }
     },
     `gatsby-transformer-remark`,
+    'gatsby-plugin-antd'
   ],
 };

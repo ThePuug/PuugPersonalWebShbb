@@ -6,6 +6,7 @@ import icoCare from "./ico-care-black.svg"
 import icoSupport from "./ico-support-black.svg"
 import icoEncourage from "./ico-encourage-black.svg"
 import icoFacebook from "./ico-facebook.svg"
+import logo from "./logo.png"
 import supportDonate from "./support-donate.png"
 import supportFooddrive from "./support-fooddrive.jpeg"
 import supportVolunteer from "./support-volunteer.jpeg"
@@ -22,6 +23,7 @@ const images = {
     icoFacebook,
     icon,
     icoSupport,
+    logo,
     profileDana,
     profileRick,
     profileTom,
