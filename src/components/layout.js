@@ -1,6 +1,6 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { Col, Image, Layout, Menu, Row } from "antd"
+import { Col, Divider, Image, Layout, Menu, Row } from "antd"
 import images from "../images/index"
 import footer from "../data/footer.yaml"
 import "../global.css"
@@ -15,8 +15,8 @@ const CustomLayout = ({children}) => (
   <Layout>
     <Header style={{backgroundColor:"white"}}>
       <Row justify="space-between">
-        <Col flex="100px">
-          <Image src={images["logo"]} />
+        <Col flex="none">
+          <Image src={images["logo"]} style={{height:"60px", width:"auto"}}/>
         </Col>
         <Col flex="auto">
           <Menu mode="horizontal" onClick={(it) => navigate(it.key)}>
@@ -27,6 +27,7 @@ const CustomLayout = ({children}) => (
       </Row>
     </Header>
     <Content>{children}</Content>
+    <Divider />
     <Footer>
       <Row align="top" gutter={16}>
         <Col sm={24} md={8}>
