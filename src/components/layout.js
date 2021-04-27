@@ -1,6 +1,7 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { Col, Layout, Menu, Row } from "antd"
+import { Col, Image, Layout, Menu, Row } from "antd"
+import images from "../images/index"
 import footer from "../data/footer.yaml"
 import "../global.css"
 
@@ -12,12 +13,18 @@ if (typeof window !== "undefined") {
 
 const CustomLayout = ({children}) => (
   <Layout>
-    <Header>
-      <Menu mode="horizontal"
-        onClick={(it) => navigate(it.key)}>
-        <Menu.Item key="/">Home</Menu.Item>
-        <Menu.Item key="/contact">Contact</Menu.Item>
-      </Menu>
+    <Header style={{backgroundColor:"white"}}>
+      <Row justify="space-between">
+        <Col flex="100px">
+          <Image src={images["logo"]} />
+        </Col>
+        <Col flex="auto">
+          <Menu mode="horizontal" onClick={(it) => navigate(it.key)}>
+            <Menu.Item key="/">Home</Menu.Item>
+            <Menu.Item key="/contact">Contact</Menu.Item>
+          </Menu>
+        </Col>
+      </Row>
     </Header>
     <Content>{children}</Content>
     <Footer>
