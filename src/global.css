@@ -4,6 +4,20 @@
   padding: 0 1em;
 }
 
+.contactOptions {
+  list-style: none;
+}
+.contactOptions li::before {
+  display:inline-block;
+  font-weight: bolder;
+  content: "or";
+  width: 2em;
+}
+.contactOptions li:first-child::before {
+  content: "";
+  width: 0em;
+}
+
 @media(min-width:768px) {
   html {
     max-width:960px;
