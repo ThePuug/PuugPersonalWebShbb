@@ -1,3 +1,4 @@
+require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: "Southhill Bread Box",
@@ -39,7 +40,22 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       }
     },
-    `gatsby-transformer-remark`,
+    'gatsby-transformer-remark',
     'gatsby-plugin-antd',
+    {
+      resolve: "@ccalamos/gatsby-source-googlemaps-static",
+      options: {
+        key: `${process.env.GOOGLE_API_KEY}`,
+        center: "South Hill, Virginia",
+        query: "South Hill Bread Box, South Hill, Virginia, United States",
+        scale: 2,
+        size: "480x270",
+        markers: [
+          {
+            location: 'PVFJ+2H South Hill, Virginia, United States',
+          }
+        ]
+      }
+    },
   ],
 };

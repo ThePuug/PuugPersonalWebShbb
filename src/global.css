@@ -6,16 +6,18 @@
 
 .contactOptions {
   list-style: none;
+  padding:0;
+  text-align:center;
 }
 .contactOptions li::before {
   display:inline-block;
   font-weight: bolder;
   content: "or";
-  width: 2em;
+  display: block;
+  padding:1em 0;
 }
 .contactOptions li:first-child::before {
   content: "";
-  width: 0em;
 }
 
 @media(min-width:768px) {
