@@ -10,8 +10,8 @@ module.exports = async function (context, req) {
 
     const res = await sgMail.send({
         "to": process.env.sendgrid_contact_recipient,
-        "from": process.env.sendgrid_contact_sender,
-        "subject": process.env.sendgrid_contact_subject,
+        "from": "admin@southhillbreadbox.com",
+        "subject": "Contact request submitted from SouthhillBreadBox.com",
         "text": `name: ${name}
 email: ${email}
 ---
