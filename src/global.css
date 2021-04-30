@@ -4,19 +4,22 @@
   padding: 0 1em;
 }
 
-.contactOptions {
+.contact {
+  text-align:center;
+}
+.contact ul {
   list-style: none;
   padding:0;
   text-align:center;
 }
-.contactOptions li::before {
+.contact li::before {
   display:inline-block;
-  font-weight: bolder;
+  font-style: italic;
   content: "or";
   display: block;
   padding:1em 0;
 }
-.contactOptions li:first-child::before {
+.contact li:first-child::before {
   content: "";
 }
 

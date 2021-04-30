@@ -43,7 +43,7 @@ const CustomLayout = ({children}) => (
         <Col sm={24} md={8}>
           <h2>{footer.numbers.heading}</h2>
           {footer.numbers.items.map((e,i) => (
-            <a key={"numbers-"+i} href={`tel:${e.number}`}><li style={{listStyle:"none"}}>{e.text}</li></a>
+            <a key={"numbers-"+i} href={`tel:${e.number}`} title="Dial now"><li style={{listStyle:"none"}}>{e.text}</li></a>
           ))}
           <h2>{footer.social.heading}</h2>
           {footer.social.items.map((e,i) => (

@@ -34,10 +34,20 @@ module.exports = {
       __key: "pages",
     },
     {
+      resolve: 'gatsby-transformer-yaml-full',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-yaml-full-markdown'
+          },
+        ],
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "data",
-        path: `${__dirname}/src/data/`,
+        path: `./src/data/`,
       }
     },
     'gatsby-transformer-remark',
@@ -46,7 +56,8 @@ module.exports = {
       resolve: "@ccalamos/gatsby-source-googlemaps-static",
       options: {
         key: `${process.env.GOOGLE_API_KEY}`,
-        center: "South Hill, Virginia",
+        center: "PVFJ+2H South Hill, Virginia, United States",
+        zoom: 16,
         query: "South Hill Bread Box, South Hill, Virginia, United States",
         scale: 2,
         size: "480x270",
