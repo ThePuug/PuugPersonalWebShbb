@@ -14,9 +14,9 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    'gatsby-transformer-remark',
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -34,24 +34,12 @@ module.exports = {
       __key: "pages",
     },
     {
-      resolve: 'gatsby-transformer-yaml-full',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-yaml-full-markdown'
-          },
-        ],
-      },
-    },
-    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "data",
         path: `./src/data/`,
       }
     },
-    'gatsby-transformer-remark',
-    'gatsby-plugin-antd',
     {
       resolve: "@ccalamos/gatsby-source-googlemaps-static",
       options: {
@@ -68,5 +56,6 @@ module.exports = {
         ]
       }
     },
+    'gatsby-plugin-antd',
   ],
 };

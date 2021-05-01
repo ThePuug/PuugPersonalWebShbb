@@ -1,0 +1,10 @@
+#services .ant-image {
+  padding:15px;
+  background-color: #ff9c27;
+  border-radius: 1em;
+  width:96px;
+}
+
+#services .ant-image-img {
+  height:66px;
+}

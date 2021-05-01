@@ -1,36 +1,84 @@
-.ant-layout-content,
-.ant-layout-header,
-.ant-layout-footer {
-  padding: 0 1em;
-}
-
-.contact {
-  text-align:center;
-}
-.contact ul {
-  list-style: none;
-  padding:0;
-  text-align:center;
-}
-.contact li::before {
-  display:inline-block;
-  font-style: italic;
-  content: "or";
-  display: block;
-  padding:1em 0;
-}
-.contact li:first-child::before {
-  content: "";
-}
-
 @media(min-width:768px) {
-  html {
-    max-width:960px;
-    margin:0 auto;
+  body .ant-layout-header,
+  body .ant-layout-footer,
+  .section.section {
+    padding: 1em 50px;
   }
-  .ant-layout-content,
-  .ant-layout-header,
-  .ant-layout-footer {
-    padding: 0 50px;
-  }
+}
+
+body .ant-layout {
+  background-color:white;
+}
+body .ant-layout-header {
+  background-color: white;
+}
+body .ant-layout-header,
+body .ant-layout-footer,
+.section.section {
+  padding: 1em 1em;
+}
+body .ant-layout-header > *,
+body .ant-layout-footer > *,
+.section.section > * {
+  max-width:960px;
+  margin:0 auto;
+}
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section p {
+  color: #192024;
+}
+.section.emphasis {
+  background-color: #ff9c27;
+}
+.section.emphasis h1,
+.section.emphasis h2,
+.section.emphasis h3,
+.section.emphasis h4,
+.section.emphasis p {
+  color: white;
+}
+.section.dark {
+  background-color: #192024
+}
+.section.dark h1,
+.section.dark h2,
+.section.dark h3,
+.section.dark h4,
+.section.dark p {
+  color: white;
+}
+
+.card-deck {
+  row-gap:16px !important;
+  margin-left: -8px !important;
+  margin-right: -8px !important;
+}
+.card-deck > .ant-col {
+  padding-left:8px !important;
+  padding-right:8px !important;
+  display: flex;
+  align-items: stretch;
+}
+.card-deck .ant-card {
+  background-color:#fffa;
+  color: #192024;
+  border-color:#0004;
+}
+.section.emphasis .card-deck .ant-card,
+.section.dark .card-deck .ant-card {
+  background:none;
+  color: white;
+  border:none;
+}
+
+.ant-layout-header .ant-image-img {
+  height:60px;
+  width:auto;
+}
+.ant-layout-footer li {
+  list-style:none;
+  padding:.33em 0;
 }

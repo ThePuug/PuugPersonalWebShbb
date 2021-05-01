@@ -18,7 +18,7 @@ email: ${email}
 ${message}`,
         "mailSettings": {
             "sandboxMode": {
-                "enable": true
+                "enable": process.env.NODE_ENV == "production" ? false : true
             }
         }
     })
