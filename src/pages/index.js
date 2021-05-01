@@ -7,7 +7,7 @@ import "../styles/index.css"
 const Page = () => (
   <>
     <div id="carousel" className="section">
-      <Carousel autoplay>
+      <Carousel autoplay arrows={true} dots={true} autoplaySpeed={5000}>
         {data.carousel.slides.map((e,i) => (
           <Card key={"carousel-"+i}>
             <Image src={images[e.image]} />

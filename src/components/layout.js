@@ -1,6 +1,6 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { Col, Divider, Image, Layout, Menu, Row } from "antd"
+import { Col, Image, Layout, Menu, Row } from "antd"
 import images from "../images/index"
 import footer from "../data/footer.yaml"
 
