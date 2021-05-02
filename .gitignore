@@ -1,6 +1,7 @@
 node_modules/
+public/
 .cache/
-public
+.vscode/
+.firebase/
 .env
 *.log
-.vscode/

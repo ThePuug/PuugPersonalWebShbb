@@ -53,6 +53,7 @@ module.exports = {
         zoom: 15,
         scale: 2,
         size: "480x270",
+        format: "jpg",
         secret: `${process.env.GOOGLEMAPS_API_SECRET}`,
         markers: [
           {
