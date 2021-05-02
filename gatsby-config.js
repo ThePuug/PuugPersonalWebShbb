@@ -44,15 +44,14 @@ module.exports = {
       resolve: "@ccalamos/gatsby-source-googlemaps-static",
       options: {
         key: `${process.env.GOOGLEMAPS_API_KEY}`,
-        center: "PVFJ+2H South Hill, Virginia, United States",
+        center: "South Hill Bread Box, Virginia, United States",
         zoom: 15,
-        query: "South Hill Bread Box, South Hill, Virginia, United States",
         scale: 2,
         size: "480x270",
         secret: `${process.env.GOOGLEMAPS_API_SECRET}`,
         markers: [
           {
-            location: 'PVFJ+2H South Hill, Virginia, United States',
+            location: 'South Hill Bread Box, Virginia, United States',
           }
         ]
       }
