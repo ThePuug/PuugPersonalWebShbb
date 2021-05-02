@@ -14,13 +14,13 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-sharp",
     {
-      resolve: 'gatsby-transformer-sharp',
+      resolve: 'gatsby-plugin-sharp',
       options: {
         failOnError: false, // workaround for the moment
       }
     },
+    'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
     {
       resolve: "gatsby-source-filesystem",
