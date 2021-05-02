@@ -11,7 +11,7 @@ const Page = ({data}) => {
 
   const onFinish = (values) => {
     setFormAction({action: "Please wait...", disabled:true})
-    axios.post('/api/SendMail',values)
+    axios.post('/api/contact',values)
     .then((res) => {
       setFormAction({action: "Sent!", disabled:true})
     }).catch((ex) => {

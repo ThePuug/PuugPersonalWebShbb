@@ -1,9 +1,25 @@
-// const functions = require("firebase-functions");
+const functions = require("firebase-functions");
+const mail = require("@sendgrid/mail");
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+exports.contact = functions.https.onRequest((request, response) => {
+  mail.setApiKey(functions.config().sendgrid.api_key);
+  mail.send({
+    to: functions.config().sendgrid.contact.recipient,
+    from: "admin@southhillbreadbox.com",
+    subject: "Contact requested from SouthHillBreadBox.com",
+    text: `Name: ${request.body.Name}
+Email: ${request.body.Email}
+---
+${request.body.Message}`,
+    mailSettings: {
+      sandboxMode: {
+        enable: functions.config().runtime.env !== "production",
+      },
+    },
+  }).then((res) => {
+    response.sendStatus(200);
+  }, (err) => {
+    functions.logger.error(err);
+    response.status(err.code).send(err.response.body);
+  });
+});
