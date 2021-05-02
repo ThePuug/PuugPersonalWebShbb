@@ -15,7 +15,12 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    {
+      resolve: 'gatsby-transformer-sharp',
+      options: {
+        failOnError: false, // workaround for the moment
+      }
+    },
     'gatsby-transformer-remark',
     {
       resolve: "gatsby-source-filesystem",
