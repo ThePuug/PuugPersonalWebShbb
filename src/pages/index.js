@@ -2,6 +2,7 @@ import * as React from "react"
 import data from "../data/index.yaml"
 import images from "../images/index"
 import { Button, Carousel, Card, Col, Image, Row, Typography } from "antd"
+import { CheckSquareTwoTone } from "@ant-design/icons"
 import "../styles/index.css"
 const { Paragraph, Title } = Typography
 
@@ -58,7 +59,10 @@ const Page = () => (
           {data.requirements.items.map((e,i) => (
             <Col sm={24} md={8} key={"requirements-"+i}>
               <Card key={"requirements-"+i}>
-                <Paragraph>{e.text}</Paragraph>
+                <Row wrap={false} gutter={8}>
+                  <Col flex="none"><CheckSquareTwoTone twoToneColor="#ff9c27" /></Col>
+                  <Col flex="auto"><Paragraph>{e.text}</Paragraph></Col>
+                </Row>
               </Card>
             </Col>
           ))}
