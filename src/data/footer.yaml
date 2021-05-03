@@ -1,15 +1,14 @@
 about:
   heading: ABOUT SOUTH HILL BREADBOX
   text: >
-    Established in 1994, we have grown and expanded to cover hundreds of needy families in 
-    Mecklenburg County. We are a partner agency with Feed More in Richmond.  This membership allows 
-    us to purchase food from them at various discounts and permits us to partner with Food Lion 
-    locally, for additional food supplies.
+    Established in 1994, we have grown beyond a monthly public food
+    distribution to also be client specific Homebound food care, and
+    emergency homeless food releif. To compliment this outreach, we 
+    have created a CARE ( Community Aid Resource Exchange) Program 
+    that allows us to help with a variety of resources beyond food. 
 links:
   heading: USEFUL LINKS
   items:
-    - url: 
-      text: SNAPS Benefits
     - url: http://www.mecklenburgva.com/Social-Services.aspx
       text: Mecklenburg County Dept of Social Services
     - url: http://www.fns.usda.gov/wic/women-infants-and-children-wic

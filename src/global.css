@@ -23,31 +23,19 @@ body .ant-layout-footer > *,
   max-width:960px;
   margin:0 auto;
 }
-.section h1,
-.section h2,
-.section h3,
-.section h4,
-.section p {
+.section .any-typography {
   color: #192024;
 }
 .section.emphasis {
   background-color: #ff9c27;
 }
-.section.emphasis h1,
-.section.emphasis h2,
-.section.emphasis h3,
-.section.emphasis h4,
-.section.emphasis p {
+.section.emphasis .ant-typography {
   color: white;
 }
 .section.dark {
   background-color: #192024
 }
-.section.dark h1,
-.section.dark h2,
-.section.dark h3,
-.section.dark h4,
-.section.dark p {
+.section.dark .ant-typography {
   color: white;
 }
 
@@ -64,13 +52,11 @@ body .ant-layout-footer > *,
 }
 .card-deck .ant-card {
   background-color:#fffa;
-  color: #192024;
   border-color:#0004;
 }
 .section.emphasis .card-deck .ant-card,
 .section.dark .card-deck .ant-card {
   background:none;
-  color: white;
   border:none;
 }
 

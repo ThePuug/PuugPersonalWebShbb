@@ -9,7 +9,7 @@ carousel:
       title: KNOW WHAT YOU NEED
       text: BEFORE YOU COME. THERE ARE A FEW THINGS YOU NEED TO KNOW AND A FEW THINGS YOU NEED TO BRING!
       image: carouselRequirements
-      button: KNOW WHAT'S REQUIRED - CLICK HERE
+      button: KNOW WHAT IS REQUIRED - CLICK HERE
     - link: support
       title: WANT TO GET INVOLVED?
       text: CONTACT US AND BECOME A PART OF OUR TEAM
@@ -21,11 +21,11 @@ services:
     - title: CARE
       image: icoCare
       text: > 
-        Provide non-perishable food supplies to qualified clients on a quarterly basis.
+        Provide non-perishable food supplies to qualified clients on a monthly basis.
     - title: ENCOURAGE
       image: icoEncourage
       text: >
-        Provide more than just food but offer holistic help through connecting clients to other 
+        Provide more than just food but offer holistic help through our CARE Program by connecting clients to other 
         potential resources.
     - title: SUPPORT
       image: icoSupport
@@ -36,12 +36,12 @@ requirements:
   heading: REQUIREMENTS FOR PATRONS
   items:
     - text: >
-        LIMIT OF ONE FOOD ALLOTMENT PER HOUSEHOLD PER QUARTER REGARDLESS OF THE NUMBER OF FAMILIES 
+        LIMIT OF ONE FOOD ALLOTMENT PER HOUSEHOLD PER MONTH REGARDLESS OF THE NUMBER OF FAMILIES 
         LIVING THERE
     - text: > 
         CLIENT MAY ESTABLISH A PROXY AGENT TO PICK UP THEIR FOOD FOR THEM.
     - text: >
-        MUST MEET AND BE ABLE TO VALIDATE THE FINANCIAL QUALIFICATION TO ESTABLISH ELIGIBILITY FOR 
+        MUST MEET AND POSSIBLY BE ASKED TO VALIDATE THE FINANCIAL QUALIFICATION TO ESTABLISH ELIGIBILITY FOR 
         OUR PROGRAM. 
     - text: >
         MUST HAVE A CURRENT BILL WITH YOUR CURRENT HOME ADDRESS ON IT FOR EVERY PICK UP

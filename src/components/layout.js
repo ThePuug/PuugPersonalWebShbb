@@ -1,9 +1,9 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { Col, Image, Layout, Menu, Row } from "antd"
+import { Col, Image, Layout, Menu, Row, Typography } from "antd"
 import images from "../images/index"
 import footer from "../data/footer.yaml"
-
+const { Link, Paragraph, Title } = Typography
 const { Content, Footer, Header } = Layout
 
 if (typeof window !== "undefined") {
@@ -32,23 +32,23 @@ const CustomLayout = ({children}) => (
       <div>
         <Row align="top" gutter={16}>
           <Col sm={24} md={8}>
-            <h2>{footer.about.heading}</h2>
-            <p>{footer.about.text}</p>
+            <Title level={4}>{footer.about.heading}</Title>
+            <Paragraph>{footer.about.text}</Paragraph>
           </Col>
           <Col sm={24} md={8}>
-            <h2>{footer.links.heading}</h2>
+            <Title level={4}>{footer.links.heading}</Title>
             {footer.links.items.map((e,i) => (
-              <a key={"links-"+i} href={e.url}><li>{e.text}</li></a>
+              <li key={"links-"+i}><Link href={e.url}>{e.text}</Link></li>
             ))}
           </Col>
           <Col sm={24} md={8}>
-            <h2>{footer.numbers.heading}</h2>
+            <Title level={4}>{footer.numbers.heading}</Title>
             {footer.numbers.items.map((e,i) => (
-              <a key={"numbers-"+i} href={`tel:${e.number}`} title="Dial now"><li>{e.text}</li></a>
+              <li key={"numbers-"+i}><Link href={`tel:${e.number}`} title="Dial now">{e.text}</Link></li>
             ))}
-            <h2>{footer.social.heading}</h2>
+            <Title level={4}>{footer.social.heading}</Title>
             {footer.social.items.map((e,i) => (
-              <a key={"social-"+i} href={e.url}><li>{e.text}</li></a>
+              <li key={"social-"+i}><Link href={e.url}>{e.text}</Link></li>
             ))}
           </Col>
         </Row>
