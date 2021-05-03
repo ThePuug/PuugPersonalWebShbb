@@ -8,17 +8,23 @@ const { Paragraph, Title } = Typography
 const Page = () => (
   <>
     <div id="carousel" className="section">
-      <Carousel autoplay arrows={true} dots={true} autoplaySpeed={5000}>
+      <Carousel autoplay dots={false} autoplaySpeed={5000}>
         {data.carousel.slides.map((e,i) => (
-          <Card key={"carousel-"+i}>
-            <Image src={images[e.image]} />
-            <div style={{textAlign:"center"}}>
-              <Title level={3}>{e.title}</Title>
-              <Paragraph>{e.text}</Paragraph>
-              <Button href={`#${e.link}`}>{e.button}</Button>
-            </div>
-          </Card>
-          ))}
+          <div key={"carousel-"+i}>
+            <Row align="middle" justify="space-around" gutter={16}>
+              <Col sm={24} md={12}>
+                <div>
+                  <Title level={3}>{e.title}</Title>
+                  <Paragraph>{e.text}</Paragraph>
+                  <Button href={`#${e.link}`}>{e.button}</Button>
+                </div>
+              </Col>
+              <Col sm={24} md={12}>
+                <Image src={images[e.image]} />
+              </Col>
+            </Row>
+          </div>
+        ))}
       </Carousel>
     </div>
     <div id="services" className="section">
@@ -67,7 +73,7 @@ const Page = () => (
             <Col sm={24} md={8} key={"support-"+i}>
               <Card key={"support-"+i}>
                 <center>
-                  <Image style={{height:"162px", width:"auto", borderRadius:"50%"}} src={images[e.image]} />
+                  <Image src={images[e.image]} />
                   <Title level={3}>{e.title}</Title>
                 </center>
                 <Paragraph>{e.text}</Paragraph>
@@ -86,7 +92,7 @@ const Page = () => (
               <Card key={"team"+i}>
                 <center>
                   <Title level={3}>{e.title}</Title>
-                  <Image style={{height:"162px", width:"auto"}} src={images[e.image]} />
+                  <Image src={images[e.image]} />
                   <Title level={3}>{e.subtitle}</Title>
                 </center>
                 <Paragraph>{e.text}</Paragraph>

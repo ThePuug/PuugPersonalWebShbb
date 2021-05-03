@@ -53,11 +53,13 @@ body .ant-layout-footer > *,
 .card-deck .ant-card {
   background-color:#fffa;
   border-color:#0004;
+  box-shadow:1px 1px 8px #0004
 }
 .section.emphasis .card-deck .ant-card,
 .section.dark .card-deck .ant-card {
   background:none;
   border:none;
+  box-shadow:none;
 }
 
 .ant-layout-header .ant-image-img {

@@ -1,3 +1,17 @@
+#carousel .ant-col > * {
+  text-align:center;
+  margin:8px 0;
+}
+#carousel .ant-image {
+  margin:8px;
+  box-shadow:1px 1px 7px #000a;
+}
+#support .ant-image-img,
+#team .ant-image-img {
+  height: 162px;
+  width: auto;
+  border-radius: 50%;
+}
 #services .ant-image {
   padding:15px;
   background-color: #ff9c27;
