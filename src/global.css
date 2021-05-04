@@ -53,7 +53,8 @@ body .ant-layout-footer > *,
 .card-deck .ant-card {
   background-color:#fffa;
   border-color:#0004;
-  box-shadow:1px 1px 8px #0004
+  box-shadow:1px 1px 8px #0004;
+  width:100%;
 }
 .section.emphasis .card-deck .ant-card,
 .section.dark .card-deck .ant-card {
