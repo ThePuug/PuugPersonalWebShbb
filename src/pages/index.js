@@ -1,17 +1,103 @@
 import * as React from "react"
 import data from "../data/index.yaml"
 import images from "../images/index"
-import { Button, Carousel, Card, Col, Image, Row, Typography } from "antd"
+import styled from "styled-components"
+import { Section } from "../components/custom"
+import { Button, Carousel, Card, Col, Image, Layout, Row, Typography } from "antd"
 import { CheckSquareTwoTone } from "@ant-design/icons"
-import "../styles/index.css"
 const { Paragraph, Title } = Typography
+const { Content } = Layout
+
+const StyledSection = styled(Section)`
+  background-color: white;
+  .ant-typography {
+    color: #192024;
+  }
+`
+
+const DarkSection = styled(StyledSection)`
+  background-color: #192024;
+  .ant-typography {
+    color: white;
+  }
+  .ant-card {
+    background:none;
+    border:none;
+    box-shadow:none;  
+  }
+`
+
+const EmphasisSection = styled(DarkSection)`
+  background-color: #ff9c27;
+`
+
+const StyledCarousel = styled(Carousel)`
+  .ant-col > * {
+    text-align:center;
+    margin:8px 0;
+  }
+  .ant-image {
+    margin:8px;
+    box-shadow:1px 1px 7px #000a;
+  }
+`
+
+const CardDeck = styled(Row)`
+  row-gap:16px !important;
+  margin-left: -8px !important;
+  margin-right: -8px !important;
+  > .ant-col {
+    padding-left:8px !important;
+    padding-right:8px !important;
+    display: flex;
+    align-items: stretch;
+  }
+  .ant-card {
+    background-color:#fffa;
+    border-color:#0004;
+    box-shadow:1px 1px 8px #0004;
+    width:100%;
+  }
+`
+
+const Requirement = styled(Col)`
+  .ant-card {
+    background: none;
+    box-shadow: none;
+  }
+  .anticon {
+    font-size: 3em;
+  }
+`
+
+const Service = styled(Col)`
+  .ant-image {
+    padding: 15px;
+    background-color: #ff9c27;
+    border-radius: 1em;
+    width: 96px;
+  }
+  .ant-image-img {
+    height: 66px;
+  }
+`
+
+const StyledCard = styled(Col)`
+  .ant-image-img,
+  .ant-image-img {
+    height: 162px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow:1px 1px 7px #000a;
+  }
+`
 
 const Page = () => (
-  <>
-    <div id="carousel" className="section">
-      <Carousel autoplay dots={false} autoplaySpeed={5000}>
-        {data.carousel.slides.map((e,i) => (
-          <div key={"carousel-"+i}>
+  <Content>
+    <StyledSection id="carousel">
+      <StyledCarousel autoplay dots={false} autoplaySpeed={5000}>
+        {data.carousel.slides.map((e, i) => (
+          <div key={"carousel-" + i}>
             <Row align="middle" justify="space-around" gutter={16}>
               <Col sm={24} md={12}>
                 <div>
@@ -26,14 +112,14 @@ const Page = () => (
             </Row>
           </div>
         ))}
-      </Carousel>
-    </div>
-    <div id="services" className="section">
+      </StyledCarousel>
+    </StyledSection>
+    <StyledSection id="services" merge>
       <Title level={2}>{data.services.heading}</Title>
       <div>
-        <Row align="stretch" className="card-deck">
-          {data.services.items.map((e,i) => (
-            <Col sm={24} md={8} key={"services-"+i}>
+        <CardDeck align="stretch">
+          {data.services.items.map((e, i) => (
+            <Service sm={24} md={8} key={"services-" + i}>
               <Card>
                 <Row justify="center" align="middle">
                   <Col>
@@ -47,53 +133,53 @@ const Page = () => (
                   <Paragraph>{e.text}</Paragraph>
                 </Row>
               </Card>
-            </Col>
+            </Service>
           ))}
-        </Row>
+        </CardDeck>
       </div>
-    </div>
-    <div id="requirements" className="emphasis section">
+    </StyledSection>
+    <EmphasisSection id="requirements">
       <Title level={2}>{data.requirements.heading}</Title>
       <div>
-        <Row className="card-deck transparent">
-          {data.requirements.items.map((e,i) => (
-            <Col sm={24} md={8} key={"requirements-"+i}>
-              <Card key={"requirements-"+i}>
+        <CardDeck>
+          {data.requirements.items.map((e, i) => (
+            <Requirement sm={24} md={8} key={"requirements-" + i}>
+              <Card key={"requirements-" + i}>
                 <Row wrap={false} gutter={8}>
                   <Col flex="none"><CheckSquareTwoTone twoToneColor="#ff9c27" /></Col>
                   <Col flex="auto"><Paragraph>{e.text}</Paragraph></Col>
                 </Row>
               </Card>
-            </Col>
+            </Requirement>
           ))}
-        </Row>
+        </CardDeck>
       </div>
-    </div>
-    <div id="support" className="dark section">
+    </EmphasisSection>
+    <DarkSection id="support">
       <Title level={2}>{data.support.heading}</Title>
       <div>
         <Row className="card-deck">
-          {data.support.items.map((e,i) => (
-            <Col sm={24} md={8} key={"support-"+i}>
-              <Card key={"support-"+i}>
+          {data.support.items.map((e, i) => (
+            <StyledCard sm={24} md={8} key={"support-" + i}>
+              <Card key={"support-" + i}>
                 <center>
                   <Image src={images[e.image]} />
                   <Title level={3}>{e.title}</Title>
                 </center>
                 <Paragraph>{e.text}</Paragraph>
               </Card>
-            </Col>
+            </StyledCard>
           ))}
         </Row>
       </div>
-    </div>
-    <div id="team" className="section">
+    </DarkSection>
+    <StyledSection id="team">
       <Title level={2}>{data.team.heading}</Title>
       <div>
-        <Row className="card-deck">
-          {data.team.items.map((e,i) => (
-            <Col sm={24} md={8} key={"team-"+i}>
-              <Card key={"team"+i}>
+        <CardDeck>
+          {data.team.items.map((e, i) => (
+            <StyledCard sm={24} md={8} key={"team-" + i}>
+              <Card key={"team" + i}>
                 <center>
                   <Title level={3}>{e.title}</Title>
                   <Image src={images[e.image]} />
@@ -101,11 +187,11 @@ const Page = () => (
                 </center>
                 <Paragraph>{e.text}</Paragraph>
               </Card>
-            </Col>
+            </StyledCard>
           ))}
-        </Row>
+        </CardDeck>
       </div>
-    </div>
-  </>
+    </StyledSection>
+  </Content>
 );
 export default Page

@@ -1,3 +1,7 @@
+import React from "react"
+import Template from "./src/templates/wrapper"
 import "./src/global.css"
-import CustomLayout from "./wrapPageElement"
-export const wrapPageElement = CustomLayout
+
+export const wrapPageElement = ({ element, props }) => (
+  <Template {...props}>{element}</Template>
+)

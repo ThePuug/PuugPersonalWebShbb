@@ -2,12 +2,10 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: "Southhill Bread Box",
-    siteUrl: "https://ashy-stone-03dbf680f.azurestaticapps.net"
   },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -20,6 +18,7 @@ module.exports = {
         failOnError: false, // workaround for the moment
       }
     },
+    'gatsby-plugin-antd',
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
     {
@@ -56,11 +55,11 @@ module.exports = {
         secret: `${process.env.GOOGLEMAPS_API_SECRET}`,
         markers: [
           {
-            location: 'South Hill Bread Box, Virginia, United States',
+            location: 'South Hill Bread Box, Virginia',
+            icon: './src/images/logo.png'
           }
-        ]
+        ],
       }
     },
-    'gatsby-plugin-antd',
   ],
 };
