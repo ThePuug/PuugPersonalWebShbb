@@ -16,9 +16,10 @@ const Section = styled.div`
 
 const MergeSection = styled(Section)`
   > div {
-    padding: 0 16px 50px;
+    margin-bottom:-50px;
+    padding: 0px 16px;
     @media (min-width: 992px) {
-      padding: 0 50px 50px;
+      padding: 0px 50px;
     }
   }
 `

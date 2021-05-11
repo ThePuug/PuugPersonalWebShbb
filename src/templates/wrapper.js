@@ -36,6 +36,7 @@ const HeaderLink = styled(Menu.Item)`
 `
 
 const StyledFooter = styled(Footer)`
+  padding: 0px;
   li {
     list-style: none;
     padding:.33em 0;  
@@ -96,7 +97,7 @@ const Template = ({ children }) => {
     </StyledHeader>
     <Layout>{children}</Layout>
     <StyledFooter>
-      <Section merge>
+      <Section>
         <Row align="top" gutter={16}>
           <Col sm={24} md={8}>
             <Title level={4}>{footer.about.heading}</Title>

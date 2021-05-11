@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Section } from "../components/custom"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Button, Card, Col, Form, Input, message, Result, Row, Space, Typography } from "antd"
+import { Button, Card, Col, Form, Input, message, Result, Row, Space, Tooltip, Typography } from "antd"
 import { EnvironmentOutlined, FacebookOutlined, FormOutlined, MailOutlined, PhoneOutlined, SmileOutlined } from "@ant-design/icons"
 import axios from "axios"
 const { Link, Text, Title } = Typography
@@ -58,11 +58,21 @@ const Page = ({ data }) => {
           <Title level={2}>FOR MORE INFORMATION</Title>
           <Title level={3}>HERE ARE OPTIONS FOR CONTACTING US:</Title>
           <Space direction="horizontal">
-            <Button size="large" href="#visit" onClick={() => setSelected("visit")}><EnvironmentOutlined /></Button>
-            <Button size="large" href="#call" onClick={() => setSelected("call")}><PhoneOutlined /></Button>
-            <Button size="large" href="#message" onClick={() => setSelected("message")}><FacebookOutlined /></Button>
-            <Button size="large" href="#write" onClick={() => setSelected("write")}><FormOutlined /></Button>
-            <Button size="large" href="#email" onClick={() => setSelected("email")}><MailOutlined /></Button>
+            <Tooltip title="Visit us">
+              <Button size="large" href="#visit" onClick={() => setSelected("visit")}><EnvironmentOutlined /></Button>
+            </Tooltip>
+            <Tooltip title="Call us">
+              <Button size="large" href="#call" onClick={() => setSelected("call")}><PhoneOutlined /></Button>
+            </Tooltip>
+            <Tooltip title="Message us">
+              <Button size="large" href="#message" onClick={() => setSelected("message")}><FacebookOutlined /></Button>
+            </Tooltip>
+            <Tooltip title="Write us">
+              <Button size="large" href="#write" onClick={() => setSelected("write")}><FormOutlined /></Button>
+            </Tooltip>
+            <Tooltip title="Email us">
+              <Button size="large" href="#email" onClick={() => setSelected("email")}><MailOutlined /></Button>
+            </Tooltip>
           </Space>
         </div>
       </Col>

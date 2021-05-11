@@ -36,7 +36,7 @@ const StyledCarousel = styled(Carousel)`
     text-align:center;
     margin:8px 0;
   }
-  .ant-image {
+  .gatsby-image-wrapper {
     margin:8px;
     box-shadow:1px 1px 7px #000a;
   }
@@ -92,7 +92,7 @@ const StyledCard = styled(Col)`
 const Page = ({data: {allDataYaml: {nodes}}}) => {
   const data = nodes.find(e => e.carousel && e.services && e.requirements && e.support && e.team)
   return <Content>
-    <StyledSection id="carousel">
+    <StyledSection id="carousel" merge>
       <StyledCarousel autoplay dots={false} autoplaySpeed={5000}>
         {data.carousel.slides.map((e, i) => (
           <div key={"carousel-" + i}>
@@ -112,7 +112,7 @@ const Page = ({data: {allDataYaml: {nodes}}}) => {
         ))}
       </StyledCarousel>
     </StyledSection>
-    <StyledSection id="services" merge>
+    <StyledSection id="services">
       <Title level={2}>{data.services.heading}</Title>
       <div>
         <CardDeck align="stretch">
