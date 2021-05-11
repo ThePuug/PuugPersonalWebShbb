@@ -1,7 +1,7 @@
 import * as React from "react"
-import data from "../data/index.yaml"
-import images from "../images/index"
 import styled from "styled-components"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 import { Section } from "../components/custom"
 import { Button, Carousel, Card, Col, Image, Layout, Row, Typography } from "antd"
 import { CheckSquareTwoTone } from "@ant-design/icons"
@@ -83,17 +83,15 @@ const Service = styled(Col)`
 `
 
 const StyledCard = styled(Col)`
-  .ant-image-img,
-  .ant-image-img {
-    height: 162px;
-    width: auto;
+  .gatsby-image-wrapper {
     border-radius: 50%;
     box-shadow:1px 1px 7px #000a;
   }
 `
 
-const Page = () => (
-  <Content>
+const Page = ({data: {allDataYaml: {nodes}}}) => {
+  const data = nodes.find(e => e.carousel && e.services && e.requirements && e.support && e.team)
+  return <Content>
     <StyledSection id="carousel">
       <StyledCarousel autoplay dots={false} autoplaySpeed={5000}>
         {data.carousel.slides.map((e, i) => (
@@ -107,7 +105,7 @@ const Page = () => (
                 </div>
               </Col>
               <Col sm={24} md={12}>
-                <Image src={images[e.image]} />
+                <GatsbyImage image={getImage(e.image)} alt={e.title} />
               </Col>
             </Row>
           </div>
@@ -123,7 +121,7 @@ const Page = () => (
               <Card>
                 <Row justify="center" align="middle">
                   <Col>
-                    <Image src={images[e.image]} />
+                    <Image src={e.image.publicURL} alt={e.title} />
                   </Col>
                 </Row>
                 <Row justify="center" align="middle">
@@ -163,7 +161,7 @@ const Page = () => (
             <StyledCard sm={24} md={8} key={"support-" + i}>
               <Card key={"support-" + i}>
                 <center>
-                  <Image src={images[e.image]} />
+                  <GatsbyImage image={getImage(e.image)} alt={e.title} />
                   <Title level={3}>{e.title}</Title>
                 </center>
                 <Paragraph>{e.text}</Paragraph>
@@ -182,7 +180,7 @@ const Page = () => (
               <Card key={"team" + i}>
                 <center>
                   <Title level={3}>{e.title}</Title>
-                  <Image src={images[e.image]} />
+                  <GatsbyImage image={getImage(e.image)} alt={e.title} />
                   <Title level={3}>{e.subtitle}</Title>
                 </center>
                 <Paragraph>{e.text}</Paragraph>
@@ -193,5 +191,67 @@ const Page = () => (
       </div>
     </StyledSection>
   </Content>
-);
+};
+
+export const pageQuery = graphql`query {
+  allDataYaml {
+    nodes {
+      carousel {
+        slides {
+          button
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED)
+            }
+          }
+          link
+          text
+          title
+        }
+      }
+      services {
+        heading
+        items {
+          text
+          title
+          image {
+            publicURL
+          }
+        }
+      }
+      requirements {
+        heading
+        items {
+          text
+        }
+      }
+      support {
+        heading
+        items {
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, height:162)
+            }
+          }
+          text
+          title
+        }
+      }
+      team {
+        heading
+        items {
+          subtitle
+          text
+          title
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, height:162)
+            }
+          }
+        }
+      }
+    }
+  }
+}`
+
 export default Page

@@ -3,32 +3,32 @@ carousel:
     - link: services
       title: SOUTHHILL BREAD BOX
       text: HELPING TO SUPPLEMENT THE FOOD NEEDS OF THOSE IN THE SOUTH HILL AREA
-      image: carouselServices
+      image: ../images/carousel-services.jpg
       button: DISCOVER WHAT WE DO - CLICK HERE
     - link: requirements
       title: KNOW WHAT YOU NEED
       text: BEFORE YOU COME. THERE ARE A FEW THINGS YOU NEED TO KNOW AND A FEW THINGS YOU NEED TO BRING!
-      image: carouselRequirements
+      image: ../images/carousel-requirements.jpg
       button: KNOW WHAT IS REQUIRED - CLICK HERE
     - link: support
       title: WANT TO GET INVOLVED?
       text: CONTACT US AND BECOME A PART OF OUR TEAM
-      image: carouselSupport
+      image: ../images/carousel-support.jpg
       button: LEARN HOW YOU CAN HELP - CLICK HERE
 services:
   heading: OUR SERVICES
   items:
     - title: CARE
-      image: icoCare
+      image: ../images/ico-care-black.svg
       text: > 
         Provide non-perishable food supplies to qualified clients on a monthly basis.
     - title: ENCOURAGE
-      image: icoEncourage
+      image: ../images/ico-encourage-black.svg
       text: >
         Provide more than just food but offer holistic help through our CARE Program by connecting clients to other 
         potential resources.
     - title: SUPPORT
-      image: icoSupport
+      image: ../images/ico-support-black.svg
       text: >
         Provide emergency non-perishable food supplies when alerted of a need by one of our care 
         partners around the South Hill area.
@@ -53,20 +53,20 @@ support:
   heading: HOW CAN YOU SUPPORT US
   items:
     - title: DONATE
-      image: supportDonate
+      image: ../images/support-donate.png
       text: >
         Tax deductible and can be made to Bread Box, PO Box 213, South Hill, VA 23970 or dropped 
         off at the South Hill Chamber of Commerce. These dollars are used to purchase needed food 
         when donations run low or when certain staples run out. None of our personnel are paid.
     - title: LOCAL FOOD DRIVES
-      image: supportFooddrive
+      image: ../images/support-fooddrive.jpeg
       text: >
         Big or small, they all help in a great way! We are open to speak to your church, 
         business, or organization. We can also offer suggestions for formulating a drive, be it a 
         one time event or an on-going year long collection drive. For large donations, we can 
         arrange a pick up if necessary.
     - title: VOLUNTEER
-      image: supportVolunteer
+      image: ../images/support-volunteer.jpeg
       text: >
         We are always looking for volunteers to help. There are lots of various duties and 
         training is provided if required.
@@ -74,19 +74,19 @@ team:
   heading: MEET OUR TEAM
   items:
     - title: PRESIDENT
-      image: profileDana
+      image: ../images/profile-dana.jpeg
       subtitle: Dana Debaets
       text: >
         Our goal is to build awareness and through increased awareness, we can increase our ability 
         to serve the needs of those in this county.
     - title: SECRETARY
-      image: profileTom
+      image: ../images/profile-tom.jpg
       subtitle: Tom McGrath
       text: >
         Being able to connect the dots between our business and the community served is important 
         for a smooth and consistent operation.
     - title: TREASURER
-      image: profileRick
+      image: ../images/profile-rick.jpg
       subtitle: Rick Carroll
       text: >
         Managing the financial resources is key to being efficient in what we do.

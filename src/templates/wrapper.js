@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import footer from "../data/footer.yaml"
-import { navigate } from "gatsby"
+import { useStaticQuery, graphql, navigate } from "gatsby"
 import { Section } from "../components/custom"
 import { StaticImage } from "gatsby-plugin-image"
 import { Col, Layout, Menu, Row, Typography } from "antd"
@@ -37,15 +36,49 @@ const HeaderLink = styled(Menu.Item)`
 `
 
 const StyledFooter = styled(Footer)`
-  background: #f0f2f5
   li {
     list-style: none;
     padding:.33em 0;  
   }
 `
 
-const Template = ({ children }) => (
-  <StyledLayout>
+const Template = ({ children }) => {
+  const footer = useStaticQuery(graphql`query {
+    allDataYaml {
+      nodes {
+        numbers {
+          heading
+          items {
+            number
+            text
+          }
+        }
+        links {
+          items {
+            url
+            text
+          }
+          heading
+        }
+        about {
+          text
+          heading
+        }
+        social {
+          items {
+            image {
+              publicURL
+            }
+            text
+            url
+          }
+          heading
+        }
+      }
+    }
+  }`).allDataYaml.nodes.find(e => e.about && e.links && e.numbers && e.social)
+
+  return <StyledLayout>
     <StyledHeader>
       <HeaderSection merge>
         <Row align="stretch" justify="start" gutter={16}>
@@ -89,6 +122,6 @@ const Template = ({ children }) => (
       </Section>
     </StyledFooter>
   </StyledLayout>
-);
+};
 
 export default Template

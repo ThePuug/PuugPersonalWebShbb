@@ -33,4 +33,4 @@ social:
   items:
     - url: https://www.facebook.com/southhillbreadbox
       text: Facebook
-      image: icoFacebook
+      image: ../images/ico-facebook.svg

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Section } from "../components/custom"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Button, Card, Col, Form, Input, Result, Row, Space, Typography } from "antd"
+import { Button, Card, Col, Form, Input, message, Result, Row, Space, Typography } from "antd"
 import { EnvironmentOutlined, FacebookOutlined, FormOutlined, MailOutlined, PhoneOutlined, SmileOutlined } from "@ant-design/icons"
 import axios from "axios"
 const { Link, Text, Title } = Typography
@@ -37,6 +37,7 @@ const Page = ({ data }) => {
       .then((res) => {
         setFormAction({ action: "sent", disabled: true })
       }).catch((ex) => {
+        message.error("Something went wrong, please try again.")
         setFormAction({ action: "Send", disabled: false })
       })
   }

@@ -5,6 +5,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",
@@ -21,6 +22,14 @@ module.exports = {
     'gatsby-plugin-antd',
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-yaml-full',
+      options: {
+        plugins: [
+          'gatsby-yaml-full-markdown'
+        ]
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -55,8 +64,7 @@ module.exports = {
         secret: `${process.env.GOOGLEMAPS_API_SECRET}`,
         markers: [
           {
-            location: 'South Hill Bread Box, Virginia',
-            icon: './src/images/logo.png'
+            location: 'South Hill Bread Box, Virginia'
           }
         ],
       }
