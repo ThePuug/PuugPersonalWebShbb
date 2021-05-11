@@ -49,11 +49,6 @@ const Page = ({ data }) => {
   return <StyledSection>
     <PageHeader align="middle" justify="space-around" gutter={16}>
       <Col sm={24} md={12}>
-        <Link href={data.staticMap.mapUrl}>
-          <GatsbyImage className="contactLocation" image={getImage(data.staticMap.childFile)} alt="South Hill Bread Box" />
-        </Link>
-      </Col>
-      <Col sm={24} md={12}>
         <div>
           <Title level={2}>FOR MORE INFORMATION</Title>
           <Title level={3}>HERE ARE OPTIONS FOR CONTACTING US:</Title>
@@ -75,6 +70,11 @@ const Page = ({ data }) => {
             </Tooltip>
           </Space>
         </div>
+      </Col>
+      <Col sm={24} md={12}>
+        <Link href={data.staticMap.mapUrl}>
+          <GatsbyImage className="contactLocation" image={getImage(data.staticMap.childFile)} alt="South Hill Bread Box" />
+        </Link>
       </Col>
     </PageHeader>
     <Row gutter={16}>
