@@ -1,54 +1,30 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Getting started
+- install node.js which includes npm from: https://nodejs.org/en/download/
+- get the repo `git clone https://github.com/unliketea/PuugPersonalWebShbb` 
+- inside the checkout, install packages: `npm install`
+- install required global packages: 
+    - `npm install -g firebase-tools`
+    - `npm install -g gatsby-cli`
+- login or reauth: `firebase login` or `firebase login --reauth`
+- define a few variables in `functions/.runtimeconfig.json`:
+    - sendgrid -> settings -> api keys -> create api key: `sendgrid.api_key` 
+    - sendgrid -> sender authentication -> domain authentication: `sendgrid.contact.recipient`
+    - *tip: (if you have already setup these in the past, you can retrieve production secrets with `firebase functions:config:get`)*
+- define a few variables in `.env`: 
+    - from firebase console; Project settings -> Project ID: `GATSBY_FIREBASE_PROJECT_ID`
+- for local development, run: `gatsby develop`
+- to test ssr first build (`gatsby build`) then use: `firebase emulators:start`
 
-## 🚀 Quick start
+# Deploying
+- firebase hosting is handled via a github action on push, which needs a few secrets defined (at Settings -> Secrets -> Actions)
+    - run `firebase init hosting`, part of which will create FIREBASE_SERVICE_ACCOUNT_&lt;Project ID&gt;
+    - from firebase console; Project settings -> Web API Key: `GATSBY_FIREBASE_API_KEY`
+- deploy firebase functions with `firebase deploy --only functions`
+    - New https callable function require permissions for `allUsers` as `Function Invoker` at: https://console.cloud.google.com/functions/list?project=puugpersonalwebru
 
-1.  **Create a Gatsby site.**
+# Configuration
+- github -> settings -> secrets -> repository secrets
+- firebase cli -> `firebase functions:config:set some.secret="value" another.secret="value"`
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+# Website URL
+https://southhillbreadbox.com/

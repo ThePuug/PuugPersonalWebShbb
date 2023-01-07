@@ -85,8 +85,8 @@ const Page = ({ data }) => {
               <EnvironmentOutlined />
             </Col>
             <Col flex="auto">
-              <Text>You can <Text strong>visit us</Text> at <Link href={data.staticMap.mapUrl}>604 E. Northington Street, South Hill, VA</Link> on Thursdays between 10 AM and 1 PM<br />
-        (located on the backside of the Medicine Shop and Aaron's Rentals)</Text>
+              <Text>You can <Text strong>visit us</Text> at <Link href={data.staticMap.mapUrl}>604 E. Northington Street, South Hill, VA</Link> on the first two Saturdays of each month between 10 AM and 1 PM<br />
+                (located on the backside of the Medicine Shop and Aaron's Rentals)</Text>
             </Col>
           </Row>
         </ContactOption>
