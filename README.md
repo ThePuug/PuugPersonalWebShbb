@@ -21,6 +21,7 @@
     - from firebase console; Project settings -> Web API Key: `GATSBY_FIREBASE_API_KEY`
 - deploy firebase functions with `firebase deploy --only functions`
     - New https callable function require permissions for `allUsers` as `Function Invoker` at: https://console.cloud.google.com/functions/list?project=puugpersonalwebru
+- ensure you've installed any latest npm updates before pushing with: `npm install`
 
 # Configuration
 - github -> settings -> secrets -> repository secrets
