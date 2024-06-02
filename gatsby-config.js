@@ -68,6 +68,7 @@ module.exports = {
         center: "South Hill Bread Box, Virginia, United States",
         zoom: 15,
         scale: 2,
+        format: "bmp",
         size: "480x270",
         secret: `${process.env.GOOGLEMAPS_API_SECRET}`,
         markers: [

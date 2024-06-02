@@ -23,6 +23,13 @@
     - New https callable function require permissions for `allUsers` as `Function Invoker` at: https://console.cloud.google.com/functions/list?project=puugpersonalwebru
 - ensure you've installed any latest npm updates before pushing with: `npm install`
 
+# Updating
+- deal with security updates with: `npm audit fix`
+- non-breaking updates to package.json with: 
+    - `npm i -u npm-check-updates`
+    - `ncu -u`
+    - `npm i --save`
+
 # Configuration
 - github -> settings -> secrets -> repository secrets
 - firebase cli -> `firebase functions:config:set some.secret="value" another.secret="value"`
